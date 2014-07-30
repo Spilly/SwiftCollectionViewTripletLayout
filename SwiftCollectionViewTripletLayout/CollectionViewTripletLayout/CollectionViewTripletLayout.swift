@@ -10,11 +10,11 @@ import UIKit
 
 @objc protocol SwiftCollectionViewDelegateTripletLayout: UICollectionViewDelegateFlowLayout {
 
-    @optional func collectionView(collectionView: UICollectionView!, sizeForLargeItemsInSection largeItemsSize: Int) -> CGSize
-    @optional func insetsForCollectionView(collectionView: UICollectionView!) -> UIEdgeInsets
-    @optional func sectionSpacingForCollectionView(collectionView: UICollectionView!) -> CGFloat
-    @optional func minimumInteritemSpacingForCollectionView(collectionView: UICollectionView!) -> CGFloat
-    @optional func minimumLineSpacingForCollectionView(collectionView: UICollectionView!) -> CGFloat
+    optional func collectionView(collectionView: UICollectionView!, sizeForLargeItemsInSection largeItemsSize: Int) -> CGSize
+    optional func insetsForCollectionView(collectionView: UICollectionView!) -> UIEdgeInsets
+    optional func sectionSpacingForCollectionView(collectionView: UICollectionView!) -> CGFloat
+    optional func minimumInteritemSpacingForCollectionView(collectionView: UICollectionView!) -> CGFloat
+    optional func minimumLineSpacingForCollectionView(collectionView: UICollectionView!) -> CGFloat
     
 }
 

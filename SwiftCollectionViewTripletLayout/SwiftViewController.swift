@@ -9,20 +9,24 @@ import UIKit
 
 class SwiftViewController: UIViewController, SwiftCollectionViewDelegateTripletLayout, UICollectionViewDataSource {
 
-    @IBOutlet weak var collectionView: UICollectionView
+    @IBOutlet weak var collectionView: UICollectionView?
     var photosArray: [UIImage] = [UIImage]()
 
     @IBAction func refresh(UIBarButtonItem) {
         setupPhotosArray()
-        collectionView.reloadData()
+        if let validCV = collectionView {
+            validCV.reloadData()
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        if let validCV = collectionView {
+            validCV.delegate = self
+            validCV.dataSource = self
+        }
         setupPhotosArray()
     }
 
